@@ -6,9 +6,6 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app,origins=['http://localhost','chrome-extension://jdninjfgdaddhgmgdoneenfddhbnbkdn', 'https://cgas-project.onrender.com'], supports_credentials=True, methods=['POST', 'GET'])
 
-@app.route('/')
-def index():
-    return jsonify({"message": "Welcome to the Recipe Finder API!"})
 
 @app.route('/proxy', methods=['GET'])
 def proxy():
